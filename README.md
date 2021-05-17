@@ -19,7 +19,7 @@
      1) Load the page from the deployed URL: https://github.com/DreJI95/employee-tracker 2) The mysql2, inquirer and console.table modules were used so type "npm install " to load them from the package.json. 3) start the app by typing "node app" on the bash CLI.
 
   # Usage 
-     When prompted type your input or select options. To exit press CTRL + C.
+     When prompted type your input or select options. To exit press CTRL + C. See demonstrations: https://github.com/DreJI95/employee-tracker/tree/main/recordings
 
    # License
      MIT: https://choosealicense.com/licenses/mit/
