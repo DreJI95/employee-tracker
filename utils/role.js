@@ -18,7 +18,7 @@ const addRole = function (title, salary, department_id) {
     const params = [title, salary, department_id];
   
     db.query(sql, params, (err, results) => {
-      try { console.log('\n'); console.table(results); }
+      try { console.log('\n'); console.log("Role added."); }
       catch (err) { console.log("Something is wrong with the database connection:"+ err)}
     });
 }
@@ -28,7 +28,7 @@ const removeRole = function (id) {
     const sql = `DELETE FROM role WHERE id = ?`;
   
     db.query(sql, id, (err, results) => {
-      try { console.log('\n'); console.table(results); }
+      try { console.log('\n'); console.log("Role removed."); }
       catch (err) { console.log("Something is wrong with the database connection:"+ err)}
     });
 }

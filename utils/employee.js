@@ -12,7 +12,7 @@ const viewAllEmployees = function () {
     ORDER BY employee.last_name ASC`;
 
     db.query(sql, (err, results) => {
-        try { console.log('\n'); console.table(results); }
+        try { console.log('\n'); console.table(results);}
         catch (err) { console.log("Something is wrong with the database connection:"+ err)}
     });
 }
@@ -23,7 +23,7 @@ const addEmployee = function (first_name, last_name, role_id, manager_id) {
     const params = [first_name, last_name, role_id, manager_id];
   
     db.query(sql, params, (err, results) => {
-        try { console.log('\n'); console.table(results) }
+        try { console.log('\n'); console.log("Employee added.") }
         catch (err) { console.log("Something is wrong with the database connection:"+ err) }
     });
 }
@@ -35,7 +35,7 @@ const updateEmployeeRole = function (id, role_id) {
     const params = [role_id, id];
   
     db.query(sql, params, (err, results) => {
-        try { console.log('\n'); console.table(results); }
+        try { console.log('\n'); console.log("Employee role updated."); }
         catch (err) { console.log("Something is wrong with the database connection:"+ err)}
     });
 }
@@ -47,7 +47,7 @@ const updateEmployeeManager = function (id, manager_id) {
     const params = [manager_id, id];
   
     db.query(sql, params, (err, results) => {
-        try { console.log('\n'); console.table(results); }
+        try { console.log('\n'); console.log("Employee manager updated."); }
         catch (err) { console.log("Something is wrong with the database connection:"+ err)}
     });
 }
@@ -57,7 +57,7 @@ const removeEmployee = function (id) {
     const sql = `DELETE FROM employee WHERE id = ?`;
   
     db.query(sql, id, (err, results) => {
-        try { console.log('\n'); console.table(results); }
+        try { console.log('\n'); console.log("Employee removed."); }
         catch (err) { console.log("Something is wrong with the database connection:"+ err)}
     });
 }

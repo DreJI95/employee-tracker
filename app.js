@@ -233,19 +233,17 @@ const selectedOption = function (option) {
       break;
     }
   }
-  console.log('\n');
-  init();
 }
 
 function init () {
-promptUser(questions1)
-//.then() // second prompt
-.then(response => {
-  selectedOption(response.cms_options.toString()); // show table results
-})
-.catch(err => {
-  console.log(err);
-});
+  promptUser(questions1)
+  //.then() // second prompt
+  .then(response => {
+    selectedOption(response.cms_options.toString()); // show table results
+  })
+  .catch(err => {
+    console.log(err);
+  });
 }
 
 init();
