@@ -186,67 +186,55 @@ const selectedOption = function (option) {
     }
     case 'Add a department': {
       promptUser(addDepartmentQues).then(response => {
-        const selections = response;
-        department.addDepartment(selections.department_name);
+        department.addDepartment(response.department_name);
       })
       break;
     }
     case 'Add a role': {
       promptUser(addRoleQues).then(response => {
-        const selections = response;
-        role.addRole(selections.role_title, selections.role_salary, selections.role_department);
+        role.addRole(response.role_title, response.role_salary, response.role_department);
       })
       break;
     }
     case 'Add an employee': {
       promptUser(addEmployeeQues).then(response => {
-        const selections = response;
-        console.log(selections);
-        // employee.addEmployee();
+        employee.addEmployee(response.emp_firstname,response.emp_lastname, response.emp_role, response.emp_mnager);
       })
       break;
     }
     case 'Update an employee role': {
       promptUser(updateEmployeeRoleQues).then(response => {
-        const selections = response;
-        console.log(selections);
-        // employee.updateEmployeeRole();
+        employee.updateEmployeeRole(response.employee_id, response.emp_role);
       }) 
       break;
     }
     case 'Update an employee manager': {
       promptUser(updateEmployeeManagerQues).then(response => {
-        const selections = response;
-        console.log(selections);
-        // employee.updateEmployeeManager();
+        employee.updateEmployeeManager(response.employee_id, response.emp_manager);
       }) 
       break;
     }
     case 'Delete a department': {
       promptUser(removeDepartmentQues).then(response => {
-        const selections = response;
-        console.log(selections);
-        // department.removeDepartment();
+        department.removeDepartment(response.department_id);
       })
       break;
     }
     case 'Delete a role': {
       promptUser(removeRoleQues).then(response => {
-        const selections = response;
-        console.log(selections);
-        // role.removeRole();
+        role.removeRole(response.role_id);
       })
       break;
     }
     case 'Delete a employee': {
       promptUser(removeEmployeeQues).then(response => {
-        const selections = response;
-        console.log(selections);
-        // employee.removeEmployee();
+        employee.removeEmployee(response.employee_id);
       })
       break;
     }
   }
+  console.log('\n');
+  init();
 }
 
 function init () {

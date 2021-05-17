@@ -29,7 +29,7 @@ const addEmployee = function (first_name, last_name, role_id, manager_id) {
 }
 
 //update employee's role
-const updateEmployeeRole = function (role_id, id) {
+const updateEmployeeRole = function (id, role_id) {
   
     const sql = `UPDATE employee SET role_id = ? WHERE id = ?`;
     const params = [role_id, id];
@@ -41,7 +41,7 @@ const updateEmployeeRole = function (role_id, id) {
 }
 
 //update employee's manager
-const updateEmployeeManager = function (manager_id, id) {
+const updateEmployeeManager = function (id, manager_id) {
   
     const sql = `UPDATE employee SET manager_id = ? WHERE id = ?`;
     const params = [manager_id, id];
