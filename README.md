@@ -21,6 +21,8 @@
   # Usage 
      When prompted type your input or select options. To exit press CTRL + C.
 
+  # License
+     MIT: https://choosealicense.com/licenses/mit/
 
   # Contributing
      https://www.w3schools.com/sql/func_sqlserver_concat.asp ,https://www.w3schools.com/sql/sql_count_avg_sum.asp , https://stackoverflow.com/questions/33781818/multiple-catch-in-javascript, https://www.npmjs.com/package/mysql2#using-promise-wrapper , https://www.npmjs.com/package/console.table , https://www.npmjs.com/package/inquirer
