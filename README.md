@@ -21,7 +21,11 @@
   # Usage 
      When prompted type your input or select options. To exit press CTRL + C.
 
+<<<<<<< HEAD
   # License
+=======
+ # License
+>>>>>>> 65f29555da6d22d6aa1cc34fc213e680ca62ea6b
      MIT: https://choosealicense.com/licenses/mit/
 
   # Contributing
